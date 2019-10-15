@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+@import '~antd/dist/antd.css';
+
+.App {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.info {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.indent {
+  text-indent: 20px;
+}
+
+.button {
+  margin-top: 15px;
+}
+
+.text, .message-input {
+  width: 60%;
+  margin: 30px auto 0;
+  text-align: left;
+}
+
+/* .App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+} */
