@@ -138,7 +138,6 @@ export class Body extends Component {
             n: '',
             d: '',
             e: '',
-            gusak: false,
         };
         this.messageChange = this.messageChange.bind(this);
     }
@@ -174,12 +173,6 @@ export class Body extends Component {
         })
     }
 
-    onGusak = () => {
-        this.setState({
-            gusak: true
-        })
-    }
-
     render() {
         const encrypted = (this.state.messageEncrypted).toString();
         const encoded = (this.state.messageEncoded).toString();
@@ -210,22 +203,6 @@ export class Body extends Component {
                         Ваше зашифроване повідомлення: <b>{encrypted}</b>
                     </p>
                 </div>
-
-                
-                <Button disabled={!this.state.isMessageEncrypted} onClick={this.onGusak} className='button'>Не натискати! (bug)</Button>
-                <Drawer
-                    title="Проверка на гусака"
-                    placement='bottom'
-                    closable={false}
-                    height='100%'
-                    visible={this.state.gusak}
-                    bodyStyle={{
-                        fontSize: '40px',
-                        textAlign: 'center' 
-                    }}
-                >
-                <Title level={1}>ЭТО БЫЛА ПРОВЕРКА НА ГУСАКА</Title>
-                </Drawer>
             </div>
         )
     }
