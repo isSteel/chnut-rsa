@@ -2,3 +2,5 @@
 package-lock.json
 *.md
 .gitignore
+
+build/
