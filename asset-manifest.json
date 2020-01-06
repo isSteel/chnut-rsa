@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/nuchp-rsa/static/css/main.d440c737.chunk.css",
+    "main.js": "/nuchp-rsa/static/js/main.a62ed75a.chunk.js",
+    "main.js.map": "/nuchp-rsa/static/js/main.a62ed75a.chunk.js.map",
+    "runtime-main.js": "/nuchp-rsa/static/js/runtime-main.2a3ba2b3.js",
+    "runtime-main.js.map": "/nuchp-rsa/static/js/runtime-main.2a3ba2b3.js.map",
+    "static/css/2.802837ff.chunk.css": "/nuchp-rsa/static/css/2.802837ff.chunk.css",
+    "static/js/2.ca394279.chunk.js": "/nuchp-rsa/static/js/2.ca394279.chunk.js",
+    "static/js/2.ca394279.chunk.js.map": "/nuchp-rsa/static/js/2.ca394279.chunk.js.map",
+    "index.html": "/nuchp-rsa/index.html",
+    "precache-manifest.ae47f660b5ae514702abea0c901a5e80.js": "/nuchp-rsa/precache-manifest.ae47f660b5ae514702abea0c901a5e80.js",
+    "service-worker.js": "/nuchp-rsa/service-worker.js",
+    "static/css/2.802837ff.chunk.css.map": "/nuchp-rsa/static/css/2.802837ff.chunk.css.map",
+    "static/css/main.d440c737.chunk.css.map": "/nuchp-rsa/static/css/main.d440c737.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2a3ba2b3.js",
+    "static/css/2.802837ff.chunk.css",
+    "static/js/2.ca394279.chunk.js",
+    "static/css/main.d440c737.chunk.css",
+    "static/js/main.a62ed75a.chunk.js"
+  ]
+}
