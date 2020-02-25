@@ -238,8 +238,12 @@ export class Body extends Component {
                     footer={null}
                     width='70vw'
                 >
-                    <Input className='modal-input' size='small' addonBefore='Шифр' value={this.state.messageEncrypted} disabled />
-                    <Input allowClear className='modal-input' addonBefore='Public key' value={this.state.tempN || this.state.n} onChange={this.nChange} />
+                    <div className='modal-input'>
+                        <Input size='small' addonBefore='Шифр' value={this.state.messageEncrypted} disabled />
+                    </div>
+                    <div className='modal-input'>
+                        <Input allowClear addonBefore='Public key' value={this.state.tempN || this.state.n} onChange={this.nChange} />
+                    </div>
                     <Input allowClear addonBefore='Private key' value={this.state.tempD || this.state.d} onChange={this.dChange} />
                     <Tooltip
                         placement='right'
