@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/nuchp-rsa/precache-manifest.b7e9cf7027591bf1dd9140167eff9b8e.js"
+  "/nuchp-rsa/precache-manifest.7af2348bcf40909a56dcb3ff8c4e76a8.js"
 );
 
 self.addEventListener('message', (event) => {
