@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/nuchp-rsa/static/css/main.d968306a.chunk.css",
-    "main.js": "/nuchp-rsa/static/js/main.a62ed75a.chunk.js",
+    "main.css": "/nuchp-rsa/static/css/main.98ab1742.chunk.css",
+    "main.js": "/nuchp-rsa/static/js/main.1b273c2d.chunk.js",
     "runtime-main.js": "/nuchp-rsa/static/js/runtime-main.2a3ba2b3.js",
     "static/css/2.b30123e2.chunk.css": "/nuchp-rsa/static/css/2.b30123e2.chunk.css",
-    "static/js/2.ca394279.chunk.js": "/nuchp-rsa/static/js/2.ca394279.chunk.js",
+    "static/js/2.ff5843ed.chunk.js": "/nuchp-rsa/static/js/2.ff5843ed.chunk.js",
     "index.html": "/nuchp-rsa/index.html",
-    "precache-manifest.3529b062391b411b3a8a8605629870a0.js": "/nuchp-rsa/precache-manifest.3529b062391b411b3a8a8605629870a0.js",
+    "precache-manifest.b7e9cf7027591bf1dd9140167eff9b8e.js": "/nuchp-rsa/precache-manifest.b7e9cf7027591bf1dd9140167eff9b8e.js",
     "service-worker.js": "/nuchp-rsa/service-worker.js"
   },
   "entrypoints": [
     "static/js/runtime-main.2a3ba2b3.js",
     "static/css/2.b30123e2.chunk.css",
-    "static/js/2.ca394279.chunk.js",
-    "static/css/main.d968306a.chunk.css",
-    "static/js/main.a62ed75a.chunk.js"
+    "static/js/2.ff5843ed.chunk.js",
+    "static/css/main.98ab1742.chunk.css",
+    "static/js/main.1b273c2d.chunk.js"
   ]
 }
