@@ -5,7 +5,9 @@ import {
     Typography,
     Button,
     Drawer,
-    Input
+    Input,
+    Modal,
+    Tooltip,
 } from 'antd';
 
 const { Title } = Typography;
@@ -132,14 +134,20 @@ export class Body extends Component {
             message: '',
             messageEncoded: '',
             messageEncrypted: '',
+            messageDecrypted: '',
             inputDisabled: true,
             isMessageEncoded: false,
             isMessageEncrypted: false,
+            isModalVisible: false,
             n: '',
             d: '',
             e: '',
+            tempN: '',
+            tempD: '',
         };
         this.messageChange = this.messageChange.bind(this);
+        this.nChange = this.nChange.bind(this);
+        this.dChange = this.dChange.bind(this);
     }
 
     generateKeys = () => {
@@ -150,6 +158,8 @@ export class Body extends Component {
             n: keys.n.toString(),
             d: keys.d.toString(),
             e: keys.e.toString(),
+            tempN: '',
+            tempD: '',
         })
     }
 
@@ -173,9 +183,26 @@ export class Body extends Component {
         })
     }
 
+    decrypt = (d, n) => {
+        this.setState({
+            messageDecrypted: RSA.decrypt(this.state.messageEncrypted, d, n),
+        })
+    }
+
+    toggleDecryptModal = () => {
+        this.setState({
+            isModalVisible: !this.state.isModalVisible,
+        })
+    }
+
+    nChange = e => { this.setState({ tempN: e.target.value }) };
+    dChange = e => { this.setState({ tempD: e.target.value }) };
+
     render() {
         const encrypted = (this.state.messageEncrypted).toString();
         const encoded = (this.state.messageEncoded).toString();
+        const decrypted = (this.state.messageDecrypted).toString();
+        const decoded = decrypted && RSA.decode(decrypted);
 
         return (
             <div className='body'>
@@ -203,6 +230,34 @@ export class Body extends Component {
                         Ваше зашифроване повідомлення: <b>{encrypted}</b>
                     </p>
                 </div>
+                <Button disabled={!this.state.isMessageEncrypted} onClick={this.toggleDecryptModal} className='button'>Розшифрувати повідомлення</Button>
+                <Modal
+                    title='Розшифрування'
+                    visible={this.state.isModalVisible}
+                    onCancel={this.toggleDecryptModal}
+                    footer={null}
+                    width='70vw'
+                >
+                    <Input className='modal-input' size='small' addonBefore='Шифр' value={this.state.messageEncrypted} disabled />
+                    <Input allowClear className='modal-input' addonBefore='Public key' value={this.state.tempN || this.state.n} onChange={this.nChange} />
+                    <Input allowClear addonBefore='Private key' value={this.state.tempD || this.state.d} onChange={this.dChange} />
+                    <Tooltip
+                        placement='right'
+                        title='Також можна змінити згенеровані значення ключів на довільні, для перевірки алгоритму.'
+                    >
+                        <Button
+                            className='button'
+                            type='primary' 
+                            onClick={() => this.decrypt((this.state.tempD || this.state.d), (this.state.tempN || this.state.n))}
+                        >
+                            Підтвердити
+                        </Button>
+                    </Tooltip>
+                    <div className={`text decrypted ${decoded ? (decoded === this.state.message ? 'success' : 'fail') : ''}`}>
+                        <p>{decrypted}</p>
+                        <p>{decoded}</p>
+                    </div>
+                </Modal>
             </div>
         )
     }

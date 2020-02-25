@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
 @import '~antd/dist/antd.css';
 
+body {
+  font-size: 14px;
+}
+
 .App {
   font-family: 'Roboto', sans-serif;
   text-align: center;
@@ -25,6 +29,29 @@
   width: 60%;
   margin: 30px auto 0;
   text-align: left;
+}
+
+.decrypted {
+  text-align: center;
+  font-size: 2em;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.decrypted > p {
+  margin-bottom: 0;
+}
+
+.success {
+  background-color: rgb(42, 216, 144);
+}
+
+.fail {
+  background-color: rgb(211, 51, 23);
+}
+
+.modal-input {
+  margin-bottom: 15px;
 }
 
 /* .App-logo {
